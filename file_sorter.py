@@ -60,9 +60,11 @@ def read_tags(path):
 
 def move_file(entry, tags, src_dir, dst_dir):
     """
-    Moves file to destination directory
+    Moves file to destination directory.
+    Throws OSError exception if file could not be moved to destination directory due
+    to access rights problems.
 
-    :param entry: - DirEntry object the contains file information.
+    :param entry: - DirEntry object that contains file information
     :param tags: - file tags
     :param src_dir: - source directory path
     :param dst_dir: - destination directory path
